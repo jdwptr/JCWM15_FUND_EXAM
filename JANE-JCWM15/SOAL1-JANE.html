@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOAL1</title>
+    </head>
+    <body>
+        <h1>PATTERN :</h1>
+        <br>
+        <input type="number" max= 4 min= 0 placeholder="masukan angka" id="angkamasuk">
+        <br>
+        <br>
+        <button onclick="OnBtnGanjil()" id="btnganjil">GANJIL</button>
+        <button onclick="OnBtnHuruf()" id="btnhuruf">HURUF</button>
+        <br>
+        <p id="tembak"></p>
+        <script>
+            let input = document.getElementById('angkamasuk')
+            let angka = parseInt(input.value)
+            //let btnGanjil = document.getElementById('btnganjil')
+            console.log('angka', angka)
+            
+            function OnBtnGanjil () {
+                console.log('ganjil di klik')
+                //let hasil = '<h1>RESULT :</h1><br>'
+                let patt = ""
+                
+                for (let i = 1; i <= input.value; i++) {
+                    for (let j = 0; j < i; j++) {
+                        
+                        if (i === j) {
+                            patt += i * 2 - 1
+                        } else {
+                            patt += i * 2 - 1
+                        }
+
+                    }
+                    patt += '<br>'
+                }
+                console.log(patt)
+                let p = document.getElementById("tembak")
+                p.innerHTML = `<h1>RESULT :</h1><br>${patt}`
+            }
+            OnBtnGanjil()
+
+            function OnBtnHuruf () {
+                console.log('huruf di klik')
+                let patt = ""
+
+                for (let i = 1; i <= input.value; i++) {
+                    for (let j = 0; j < i; j++) {
+                        patt += String.fromCharCode(65 + i)
+                        patt += ""
+                    }
+                    patt += '<br>'
+                }
+                console.log(patt)
+                let p = document.getElementById("tembak")
+                p.innerHTML = `<h1>RESULT :</h1><br>${patt}`
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOAL 2</title>
+    </head>
+    <body>
+    <h1>DERET FIBONANCI</h1>
+    <br>
+    <label>Masukan Angka :</label>
+    <input type="number" id="angkainput" placeholder="masukan angka">
+    <br>
+    <br>
+    <button onclick="OnBtnShow()">SHOW</button>
+    <button onclick="OnBtnGanjil()">GANJIL</button>
+    <button onclick="OnBtnGenap()">GENAP</button>
+    <p id="hasil"></p>
+        <script>
+            let angka = document.getElementById("angkainput")
+            let value = angka.value
+            let p = document.getElementById('hasil')
+            console.log('value dari input', value)
+            let initialValue = 0
+            let currentValue = 1
+
+            
+            function OnBtnShow () {
+                console.log('show di klik')
+                
+                while (currentValue < 100) {
+                    let temp = currentValue
+
+                    currentValue = currentValue + initialValue 
+                    initialValue = temp
+
+                    if (currentValue > 100) {
+                        break
+                    }
+                }
+                console.log(currentValue)
+            }
+            OnBtnShow ()
+            p.innerHTML += `${currentValue}, ${initialValue}, ${currentValue + initialValue}`
+
+            function OnBtnGanjil () {
+                console.log('ganjil di klik')
+            }
+
+            function OnBtnGenap () {
+                console.log('genap di klik')
+            }
+        </script>
+    </body>
+</html>

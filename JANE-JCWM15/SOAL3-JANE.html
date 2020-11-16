@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOAL 3</title>
+        <style>
+            table, tr, th, td {
+                border: 1px solid;
+                border-color: black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FORM USERS</h1>
+        <form id="userbaru">
+            <input type="text" id="uname" placeholder="Username">
+            <input type="email" id="email" placeholder="E-mail">
+            <select id="pilihRole">
+                <label>role :</label>
+                <option>user</option>
+                <option>admin</option>
+            </select>
+            <br>
+            <br>
+            <button onclick="OnBtnAdd(event)">ADD</button>
+        </form>
+
+        <h1>USERS DATA</h1>
+        <table id="daftaruser">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <script src="databaseuser.js"></script>
+    </body>
+</html>
